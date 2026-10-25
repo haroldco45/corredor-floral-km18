@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Corredor Floral KM 18</title>
+<meta name="description" content="Hernando Betancourt y el Vivero Paraíso están convirtiendo el KM 18 de la vía al mar en el corredor floral más hermoso del mundo. Sin política, sin fundaciones, sin contratos.">
+<meta name="theme-color" content="#0f5132">
+<meta property="og:title" content="🌸 Corredor Floral KM 18 — Sembrando Vida">
+<meta property="og:description" content="Más de 70.000 plantas regaladas con la filosofía de la generosidad. Conoce la idea de Hernando Betancourt y compártela.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde:#0f5132; --verde2:#198754; --hoja:#7bc96f; --rosa:#e83e8c; --fucsia:#d6336c;
+  --sol:#ffc107; --turq:#2bb5b0; --crema:#fffaf0; --tinta:#1d2b22; --suave:#5d6b62;
+  --card:#ffffff; --borde:#e6efe8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;background:var(--crema);color:var(--tinta);overflow-x:hidden;line-height:1.5}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1}
+a{color:inherit}
+
+/* pétalos que caen */
+#petalos{position:fixed;inset:0;pointer-events:none;z-index:50;overflow:hidden}
+.petalo{position:absolute;top:-30px;font-size:18px;animation:caer linear forwards;opacity:.9}
+@keyframes caer{to{transform:translate(var(--dx),110vh) rotate(var(--rot));opacity:.2}}
+
+/* barra superior */
+.top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:10px;padding:10px 16px;
+  background:rgba(15,81,50,.92);backdrop-filter:blur(8px);color:#fff}
+.top b{font-family:Fraunces,serif;font-size:17px;flex:1}
+.top .reloj{font-size:12px;opacity:.85}
+.btn-act{border:0;background:var(--sol);color:#3b2a00;font-weight:800;border-radius:999px;padding:7px 12px;font-size:13px;cursor:pointer}
+.btn-act.girando span{display:inline-block;animation:gira .8s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+
+/* héroe */
+.hero{position:relative;padding:44px 16px 64px;color:#fff;overflow:hidden;
+  background:linear-gradient(160deg,#0f5132 0%,#198754 45%,#2bb5b0 100%)}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(40px);opacity:.55;animation:flota 9s ease-in-out infinite alternate}
+.hero:before{width:240px;height:240px;background:var(--rosa);top:-60px;right:-60px}
+.hero:after{width:200px;height:200px;background:var(--sol);bottom:-70px;left:-50px;animation-delay:-4s}
+@keyframes flota{to{transform:translate(30px,25px) scale(1.15)}}
+.hero>*{position:relative;z-index:1}
+.chip{display:inline-flex;gap:6px;align-items:center;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+  padding:5px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.5px}
+.chip .punto{width:8px;height:8px;border-radius:50%;background:#7dffb0;box-shadow:0 0 0 0 #7dffb0;animation:late 1.6s infinite}
+@keyframes late{70%{box-shadow:0 0 0 10px transparent}}
+.hero h1{font-size:clamp(34px,9vw,58px);margin:16px 0 10px;font-weight:800}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#ffd6e7,#fff3b0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:18px;max-width:560px;opacity:.95}
+.contador{margin-top:26px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.contador .num{font-family:Fraunces,serif;font-size:clamp(52px,15vw,96px);font-weight:800;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.25)}
+.contador .lbl{font-weight:800;font-size:16px}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.cta{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;text-decoration:none;font-weight:800;font-size:15px;
+  padding:13px 18px;border-radius:14px;transition:transform .15s}
+.cta:active{transform:scale(.96)}
+.cta.wa{background:#25d366;color:#05371b;box-shadow:0 8px 22px rgba(37,211,102,.4);animation:pulso 2.4s infinite}
+@keyframes pulso{50%{box-shadow:0 8px 34px rgba(37,211,102,.75)}}
+.cta.ig{background:#fff;color:var(--fucsia)}
+.ola{position:absolute;bottom:-1px;left:0;width:100%;height:40px;z-index:2}
+
+/* secciones */
+main{max-width:760px;margin:0 auto;padding:0 16px 40px}
+section{margin-top:40px}
+.etiq{font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--fucsia)}
+section h2{font-size:clamp(26px,7vw,36px);margin:6px 0 14px;color:var(--verde)}
+.revelar{opacity:0;transform:translateY(24px);transition:all .7s cubic-bezier(.2,.7,.2,1)}
+.revelar.visto{opacity:1;transform:none}
+
+/* hoy */
+.hoy{background:var(--card);border-radius:22px;padding:20px;border:2px solid var(--borde);position:relative;overflow:hidden}
+.hoy:after{content:"🌺";position:absolute;right:-6px;top:-10px;font-size:70px;opacity:.12;transform:rotate(18deg)}
+.hoy .fecha{font-weight:800;color:var(--verde2)}
+.hoy .frase{font-family:Fraunces,serif;font-size:22px;margin:10px 0;color:var(--tinta);transition:opacity .4s}
+.hoy .dato{background:#f1faf3;border-left:4px solid var(--hoja);padding:10px 12px;border-radius:10px;font-size:15px}
+
+/* los tres NO */
+.nos{display:grid;gap:12px}
+.no{display:flex;align-items:center;gap:14px;background:var(--card);border-radius:18px;padding:16px;border:2px solid var(--borde);
+  transition:transform .2s}
+.no:hover{transform:translateX(4px)}
+.no .x{flex:none;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;font-weight:900;color:#fff;
+  background:linear-gradient(135deg,var(--rosa),#ff7a59)}
+.no b{font-size:18px;display:block}
+.no small{color:var(--suave);font-size:14px}
+.si{margin-top:14px;padding:18px;border-radius:18px;color:#fff;font-size:18px;font-weight:800;text-align:center;
+  background:linear-gradient(135deg,var(--verde2),var(--turq))}
+
+/* cifras */
+.cifras{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cifra{background:var(--card);border-radius:18px;padding:16px 14px;border:2px solid var(--borde);text-align:center}
+.cifra .n{font-family:Fraunces,serif;font-size:32px;font-weight:800;color:var(--verde2)}
+.cifra:nth-child(2) .n{color:var(--fucsia)}
+.cifra:nth-child(3) .n{color:#d48a00}
+.cifra:nth-child(4) .n{color:var(--turq)}
+.cifra p{font-size:13px;color:var(--suave);font-weight:600}
+.nota{font-size:12px;color:var(--suave);margin-top:10px}
+
+/* línea de obras */
+.linea{position:relative;padding-left:26px}
+.linea:before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:3px;border-radius:3px;
+  background:linear-gradient(var(--hoja),var(--rosa),var(--sol))}
+.obra{position:relative;margin-bottom:16px;background:var(--card);border-radius:16px;padding:14px 16px;border:2px solid var(--borde)}
+.obra:before{content:"";position:absolute;left:-23px;top:18px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--verde2)}
+.obra.destacada{border-color:var(--rosa);background:#fff5f9}
+.obra.destacada:before{border-color:var(--rosa);background:var(--rosa)}
+.obra h3{font-size:18px;color:var(--verde)}
+.obra p{font-size:15px;color:var(--suave)}
+
+/* quién */
+.quien{display:flex;gap:16px;align-items:flex-start;background:var(--card);border-radius:22px;padding:18px;border:2px solid var(--borde)}
+.avatar{flex:none;width:78px;height:78px;border-radius:50%;display:grid;place-items:center;font-size:36px;
+  background:conic-gradient(var(--sol),var(--rosa),var(--fucsia),var(--sol));padding:4px}
+.avatar span{width:100%;height:100%;border-radius:50%;background:#fff;display:grid;place-items:center}
+.quien h3{font-size:20px;color:var(--verde)}
+.quien p{font-size:15px;color:var(--suave);margin-top:4px}
+.cita{margin-top:14px;font-family:Fraunces,serif;font-size:19px;color:var(--verde);padding:16px;border-radius:16px;background:#eef8f0}
+
+/* cómo ayudar */
+.ayuda{display:grid;gap:12px}
+.paso{display:flex;gap:14px;align-items:flex-start;background:var(--card);border-radius:18px;padding:16px;border:2px solid var(--borde);cursor:pointer;transition:all .2s}
+.paso.hecho{border-color:var(--hoja);background:#f1faf3}
+.paso .ic{flex:none;font-size:28px}
+.paso b{display:block;font-size:17px}
+.paso small{color:var(--suave);font-size:14px}
+.paso .check{margin-left:auto;flex:none;width:26px;height:26px;border-radius:50%;border:2px solid var(--borde);display:grid;place-items:center;font-size:14px;color:#fff}
+.paso.hecho .check{background:var(--verde2);border-color:var(--verde2)}
+.progreso{height:12px;border-radius:999px;background:#e3ece5;overflow:hidden;margin:6px 0 4px}
+.progreso i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--hoja),var(--rosa));transition:width .5s}
+
+/* jardín virtual */
+.jardin{background:linear-gradient(#e9f7ff,#f6fff1);border-radius:22px;padding:18px;border:2px solid var(--borde);text-align:center}
+.parcela{height:150px;position:relative;margin:14px 0;border-radius:16px;overflow:hidden;
+  background:linear-gradient(transparent 55%,#8b5a3c 55%,#6f4630)}
+.flor{position:absolute;bottom:42%;font-size:28px;transform-origin:bottom center;animation:brota .6s cubic-bezier(.3,1.6,.5,1) both, mece 3s ease-in-out infinite alternate .6s}
+@keyframes brota{from{transform:scale(0)}}
+@keyframes mece{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}
+.btn-sembrar{border:0;cursor:pointer;background:var(--verde2);color:#fff;font-weight:800;font-size:16px;padding:14px 22px;border-radius:14px}
+.btn-sembrar:active{transform:scale(.95)}
+
+/* compartir final */
+.final{margin-top:44px;border-radius:24px;padding:26px 18px;color:#fff;text-align:center;
+  background:linear-gradient(135deg,var(--fucsia),#ff7a59 60%,var(--sol))}
+.final h2{color:#fff}
+.final p{font-size:17px;margin-bottom:16px}
+.final .cta-row{justify-content:center}
+
+footer{text-align:center;font-size:13px;color:var(--suave);padding:24px 16px 90px}
+footer a{color:var(--verde2);font-weight:800}
+
+/* ícono de publicidad Vibras */
+.vibras-ad{position:fixed;right:12px;bottom:14px;z-index:45;width:46px;height:46px;border-radius:50%;
+  background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.2);display:grid;place-items:center;text-decoration:none;font-size:22px;border:2px solid var(--sol)}
+.vibras-ad small{position:absolute;top:-8px;right:-6px;background:var(--sol);color:#3b2a00;font-size:9px;font-weight:900;padding:1px 5px;border-radius:6px}
+
+.toast{position:fixed;left:50%;bottom:80px;transform:translateX(-50%) translateY(30px);opacity:0;background:var(--tinta);color:#fff;
+  padding:10px 16px;border-radius:12px;font-weight:700;font-size:14px;z-index:60;transition:all .3s}
+.toast.ver{opacity:1;transform:translateX(-50%)}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="petalos"></div>
+
+<div class="top">
+  <b>🌸 Corredor Floral KM 18</b>
+  <span class="reloj" id="reloj"></span>
+  <button class="btn-act" id="btnAct" aria-label="Actualizar"><span>⟳</span> Actualizar</button>
+</div>
+
+<header class="hero">
+  <span class="chip"><i class="punto"></i> SEMBRANDO AHORA · VÍA AL MAR, CALI</span>
+  <h1>El corredor floral <em>más hermoso del mundo</em></h1>
+  <p class="lead">Un hombre vestido de blanco, su equipo del Vivero Paraíso y miles de plantas regaladas en el KM 18. Sin pedir nada a cambio.</p>
+  <div class="contador">
+    <span class="num" id="contador">0</span>
+    <span class="lbl">plantas entre frutales,<br>polinizadores y flores</span>
+  </div>
+  <div class="cta-row">
+    <button class="cta wa" id="compartirTop">📲 Compartir por WhatsApp</button>
+    <a class="cta ig" href="https://www.instagram.com/viveroparaisohernandobetancour/" target="_blank" rel="noopener">📷 Seguirlo</a>
+  </div>
+  <svg class="ola" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#fffaf0" d="M0,40 C240,80 480,0 720,30 C960,60 1200,10 1440,40 L1440,80 L0,80 Z"/></svg>
+</header>
+
+<main>
+
+  <section class="revelar">
+    <span class="etiq">Hoy</span>
+    <h2>Lo que florece hoy</h2>
+    <div class="hoy">
+      <div class="fecha" id="hoyFecha"></div>
+      <p class="frase" id="hoyFrase"></p>
+      <div class="dato" id="hoyDato"></div>
+    </div>
+  </section>
+
+  <section class="revelar">
+    <span class="etiq">La idea</span>
+    <h2>La filosofía de la generosidad</h2>
+    <p style="margin-bottom:14px">En el Jardín y Sala de Arte del KM 18, sobre la vía al mar en Cali, Hernando Betancourt Suárez y su equipo están sembrando a mano, talud por talud, junto a los murales de colibríes y quetzales. Su regla es sencilla:</p>
+    <div class="nos">
+      <div class="no"><span class="x">✕</span><div><b>No es política</b><small>No busca votos ni cargos.</small></div></div>
+      <div class="no"><span class="x">✕</span><div><b>No es una fundación</b><small>No pide donaciones para sembrar.</small></div></div>
+      <div class="no"><span class="x">✕</span><div><b>No son contratos</b><small>Nadie le paga por hacerlo.</small></div></div>
+    </div>
+    <div class="si">✔ Es un regalo para Colombia y el mundo 🌎</div>
+  </section>
+
+  <section class="revelar">
+    <span class="etiq">En cifras</span>
+    <h2>Un sembrador incansable</h2>
+    <div class="cifras">
+      <div class="cifra"><div class="n" data-n="70000">0</div><p>plantas en el corredor del KM 18</p></div>
+      <div class="cifra"><div class="n" data-n="117">0</div><p>países donde ha sembrado</p></div>
+      <div class="cifra"><div class="n" data-n="1023">0</div><p>ciudades con sus árboles</p></div>
+      <div class="cifra"><div class="n" data-n="26000">0</div><p>arbustos florales en la vía al mar</p></div>
+    </div>
+    <p class="nota">Fuentes: su publicación del 22 de octubre de 2026 y entrevistas en El País (Cali) y Radio Nacional. El Concejo de Cali le entregó la Medalla Santiago de Cali, Cruz de Oro.</p>
+  </section>
+
+  <section class="revelar">
+    <span class="etiq">Su huella</span>
+    <h2>Donde ya ha sembrado</h2>
+    <div class="linea">
+      <div class="obra destacada"><h3>🌺 KM 18 · Vía al mar</h3><p>Jardín y Sala de Arte: más de 70.000 plantas entre frutales, polinizadores y flores (octubre 2026).</p></div>
+      <div class="obra"><h3>🛣️ Vía al mar, KM 9 al KM 22</h3><p>Miles de arbustos florales donados para embellecer la carretera.</p></div>
+      <div class="obra"><h3>🌳 Avenida Sexta Norte, Cali</h3><p>Corredor verde con más de 1.300 especies florales y de árboles.</p></div>
+      <div class="obra"><h3>🌼 Separador Cali – Jamundí</h3><p>Siembratón con decenas de aliados para vestir de flores la Panamericana.</p></div>
+      <div class="obra"><h3>🌿 Quilichao – Villa Rica</h3><p>Corredor embellecido por el equipo del Vivero Paraíso.</p></div>
+    </div>
+  </section>
+
+  <section class="revelar">
+    <span class="etiq">Quién es</span>
+    <h2>Hernando Betancourt Suárez</h2>
+    <div class="quien">
+      <div class="avatar"><span>🌱</span></div>
+      <div>
+        <h3>Empresario, filántropo y sembrador</h3>
+        <p>Siempre vestido de blanco y rodeado de sus perros, dirige el Vivero Paraíso Sembrando Vida. Dice que no tiene finca: su finca es Colombia.</p>
+      </div>
+    </div>
+    <div class="cita">“Un país que siembra es un país que inspira. Colombia inspira al mundo.”</div>
+  </section>
+
+  <section class="revelar">
+    <span class="etiq">Súmate</span>
+    <h2>Cómo ayudar a que lo conozcan</h2>
+    <div class="progreso"><i id="barra"></i></div>
+    <p class="nota" id="txtProg" style="margin:0 0 12px">Toca cada paso cuando lo hagas</p>
+    <div class="ayuda" id="ayuda">
+      <div class="paso" data-k="compartir"><span class="ic">📲</span><div><b>Comparte esta app</b><small>Mándala a 3 grupos de WhatsApp. Él lo pidió: que el mundo se contagie.</small></div><span class="check">✓</span></div>
+      <div class="paso" data-k="seguir"><span class="ic">📷</span><div><b>Síguelo en Instagram</b><small>@viveroparaisohernandobetancour — más de 27 mil personas ya lo siguen.</small></div><span class="check">✓</span></div>
+      <div class="paso" data-k="visitar"><span class="ic">🚗</span><div><b>Visita el KM 18</b><small>Si pasas por la vía al mar en Cali, para, mira y toma fotos con el corredor.</small></div><span class="check">✓</span></div>
+      <div class="paso" data-k="colegio"><span class="ic">🏫</span><div><b>Cuéntale a un colegio</b><small>El vivero ha regalado plantones a escuelas que envían una carta y un video de los niños comprometiéndose a sembrar.</small></div><span class="check">✓</span></div>
+      <div class="paso" data-k="sembrar"><span class="ic">🌱</span><div><b>Siembra tú también</b><small>Un árbol en tu barrio, tu finca o tu calle. Esa es la idea.</small></div><span class="check">✓</span></div>
+    </div>
+  </section>
+
+  <section class="revelar">
+    <span class="etiq">Juega</span>
+    <h2>Siembra una flor virtual</h2>
+    <div class="jardin">
+      <p>Cada toque es una flor para el corredor. ¿Cuántas siembras tú?</p>
+      <div class="parcela" id="parcela"></div>
+      <button class="btn-sembrar" id="btnSembrar">🌸 Sembrar</button>
+      <p class="nota" id="txtFlores">Has sembrado 0 flores</p>
+    </div>
+  </section>
+
+  <div class="final revelar">
+    <h2>Que el mundo se contagie</h2>
+    <p>Las buenas ideas crecen cuando se comparten. Mándala ahora.</p>
+    <div class="cta-row">
+      <button class="cta wa" id="compartirFin">📲 Compartir por WhatsApp</button>
+      <button class="cta ig" id="copiar">🔗 Copiar enlace</button>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  App sin ánimo de lucro hecha con cariño por <a href="https://www.vibraspositivashm.com/" target="_blank" rel="noopener">Vibras Positivas HM</a> · Caucasia, Antioquia<br>
+  para dar a conocer la obra de Hernando Betancourt y el Vivero Paraíso.
+</footer>
+
+<a class="vibras-ad" href="https://www.vibraspositivashm.com/" target="_blank" rel="noopener" aria-label="Publicidad Vibras Positivas HM">☀️<small>AD</small></a>
+<div class="toast" id="toast"></div>
+
+<script>
+const URL_APP = 'https://corredor-floral-km18.netlify.app';
+const MSG = '🌸 Mira esto: Hernando Betancourt está regalando más de 70.000 plantas para convertir el KM 18 de la vía al mar (Cali) en el corredor floral más hermoso del mundo. Sin política, sin fundaciones, sin contratos. ¡Compártelo para que el mundo se contagie! 👉 ' + URL_APP;
+
+const $ = s => document.querySelector(s);
+const tz = 'America/Bogota';
+
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('ver');setTimeout(()=>e.classList.remove('ver'),2200)}
+
+/* reloj en hora de Colombia */
+function reloj(){ $('#reloj').textContent = new Date().toLocaleTimeString('es-CO',{timeZone:tz,hour:'2-digit',minute:'2-digit'}); }
+reloj(); setInterval(reloj,30000);
+
+/* pétalos */
+const P=['🌸','🌺','🌼','🍃','🌷'];
+function petalo(){
+  const e=document.createElement('span');e.className='petalo';e.textContent=P[Math.random()*P.length|0];
+  e.style.left=Math.random()*100+'vw';e.style.setProperty('--dx',(Math.random()*120-60)+'px');
+  e.style.setProperty('--rot',(Math.random()*720-360)+'deg');e.style.animationDuration=(6+Math.random()*6)+'s';
+  e.style.fontSize=(12+Math.random()*12)+'px';$('#petalos').appendChild(e);setTimeout(()=>e.remove(),12500);
+}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(petalo,1400);
+
+/* contador animado */
+function animar(el,fin,dur=1800){
+  const ini=performance.now();
+  (function paso(t){const p=Math.min((t-ini)/dur,1),v=Math.round(fin*(1-Math.pow(1-p,3)));
+    el.textContent=v.toLocaleString('es-CO')+(el.id==='contador'&&p===1?'+':'');if(p<1)requestAnimationFrame(paso)})(ini);
+}
+animar($('#contador'),70000,2400);
+
+/* sección Hoy — cambia cada vez que se entra */
+const FRASES=[
+  'Un país que siembra es un país que inspira.',
+  'Cada flor del KM 18 es un regalo, no un contrato.',
+  'Su finca es Colombia entera.',
+  'Las plantas no votan, pero dan oxígeno a todos.',
+  'La generosidad también se siembra.',
+  'Que el mundo se contagie de flores.',
+  'Sembrar frutales es pensar en los hijos.'
+];
+const DATOS=[
+  '🌿 El corredor mezcla frutales, polinizadores y flores: comida para colibríes, abejas y mariposas.',
+  '🎨 Las flores crecen sobre los murales de aves del KM 18: arte y naturaleza juntos.',
+  '🏅 El Concejo de Cali le entregó la Medalla Santiago de Cali en Cruz de Oro por su legado.',
+  '🌎 Ha sembrado en más de 117 países y más de mil ciudades.',
+  '🏫 Las escuelas pueden pedir plantones con una carta y un video de los niños.',
+  '🐦 El KM 18 es famoso por sus aves: más de 20 especies de colibríes viven en sus bosques.',
+  '🛣️ Desde el KM 9 hasta el KM 22 de la vía al mar ya hay miles de arbustos florales donados.'
+];
+function pintarHoy(){
+  const ahora=new Date();
+  $('#hoyFecha').textContent='🗓️ '+ahora.toLocaleDateString('es-CO',{timeZone:tz,weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  const f=$('#hoyFrase');f.style.opacity=0;
+  setTimeout(()=>{f.textContent='“'+FRASES[Math.random()*FRASES.length|0]+'”';f.style.opacity=1},200);
+  $('#hoyDato').textContent=DATOS[Math.random()*DATOS.length|0];
+}
+pintarHoy();
+
+/* botón actualizar */
+$('#btnAct').onclick=async()=>{
+  const b=$('#btnAct');b.classList.add('girando');
+  try{ if('serviceWorker' in navigator){const r=await navigator.serviceWorker.getRegistration();if(r)await r.update();} }catch(e){}
+  setTimeout(()=>{b.classList.remove('girando');pintarHoy();animar($('#contador'),70000,1500);
+    for(let i=0;i<8;i++)setTimeout(petalo,i*120);toast('🌸 ¡Actualizado!')},900);
+};
+
+/* aparecer al hacer scroll + cifras */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;e.target.classList.add('visto');
+  e.target.querySelectorAll('[data-n]').forEach(n=>{if(!n.dataset.ok){n.dataset.ok=1;animar(n,+n.dataset.n)}});
+  io.unobserve(e.target);
+}),{threshold:.15});
+document.querySelectorAll('.revelar').forEach(s=>io.observe(s));
+
+/* compartir */
+function compartir(){
+  if(navigator.share){navigator.share({title:'Corredor Floral KM 18',text:MSG}).catch(()=>{});}
+  else window.open('https://wa.me/?text='+encodeURIComponent(MSG),'_blank');
+  marcar('compartir',true);
+}
+$('#compartirTop').onclick=compartir;$('#compartirFin').onclick=compartir;
+$('#copiar').onclick=()=>{navigator.clipboard?.writeText(URL_APP).then(()=>toast('🔗 Enlace copiado'),()=>toast(URL_APP))};
+
+/* pasos de ayuda (se recuerdan en este celular) */
+let hechos={};try{hechos=JSON.parse(localStorage.getItem('km18_pasos')||'{}')}catch(e){}
+function guardar(){try{localStorage.setItem('km18_pasos',JSON.stringify(hechos))}catch(e){}}
+function pintarPasos(){
+  const ps=document.querySelectorAll('.paso');let n=0;
+  ps.forEach(p=>{const ok=!!hechos[p.dataset.k];p.classList.toggle('hecho',ok);if(ok)n++});
+  $('#barra').style.width=(n/ps.length*100)+'%';
+  $('#txtProg').textContent=n===ps.length?'🌟 ¡Eres un sembrador de vibras positivas!':`${n} de ${ps.length} pasos — toca cada paso cuando lo hagas`;
+}
+function marcar(k,v){hechos[k]=v;guardar();pintarPasos()}
+document.querySelectorAll('.paso').forEach(p=>p.onclick=()=>{
+  const k=p.dataset.k;
+  if(k==='compartir'&&!hechos[k])return compartir();
+  if(k==='seguir'&&!hechos[k])window.open('https://www.instagram.com/viveroparaisohernandobetancour/','_blank');
+  marcar(k,!hechos[k]);if(hechos[k])for(let i=0;i<5;i++)setTimeout(petalo,i*100);
+});
+pintarPasos();
+
+/* jardín virtual */
+let flores=0;try{flores=+localStorage.getItem('km18_flores')||0}catch(e){}
+const FL=['🌸','🌺','🌼','🌷','🌻','🪻','🌹'];
+function ponerFlor(anim){
+  const f=document.createElement('span');f.className='flor';f.textContent=FL[Math.random()*FL.length|0];
+  f.style.left=(4+Math.random()*88)+'%';f.style.bottom=(36+Math.random()*12)+'%';
+  if(!anim)f.style.animation='mece 3s ease-in-out infinite alternate';
+  const par=$('#parcela');par.appendChild(f);if(par.children.length>40)par.firstChild.remove();
+}
+for(let i=0;i<Math.min(flores,40);i++)ponerFlor(false);
+function txtFlores(){$('#txtFlores').textContent=`Has sembrado ${flores.toLocaleString('es-CO')} flor${flores===1?'':'es'}`+(flores>=10?' 🌟':'')}
+txtFlores();
+$('#btnSembrar').onclick=()=>{flores++;try{localStorage.setItem('km18_flores',flores)}catch(e){}ponerFlor(true);txtFlores();
+  if(flores%10===0){toast('🌺 ¡'+flores+' flores! Ahora siembra una de verdad');marcar('sembrar',true)}};
+
+/* PWA */
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+</script>
+</body>
+</html>

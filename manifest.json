@@ -1,0 +1,14 @@
+{
+  "name": "Corredor Floral KM 18 — Sembrando Vida",
+  "short_name": "Corredor KM 18",
+  "description": "La idea de Hernando Betancourt: más de 70.000 plantas regaladas en el KM 18 de la vía al mar, Cali.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fffaf0",
+  "theme_color": "#0f5132",
+  "lang": "es-CO",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
