@@ -1,0 +1,36 @@
+name: Robot de medios KM 18
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # cada 30 minutos
+  workflow_dispatch:         # botón "Run workflow" para correrlo a mano
+
+permissions:
+  contents: write
+
+concurrency:
+  group: robot-medios
+  cancel-in-progress: false
+
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Buscar videos y noticias nuevas
+        run: node scripts/robot.mjs
+      - name: Guardar si hay novedades
+        run: |
+          if [ -n "$(git status --porcelain data)" ]; then
+            git config user.name "robot-vibras"
+            git config user.email "robot@vibraspositivashm.com"
+            git add data
+            git commit -m "🤖 Novedades de medios $(TZ=America/Bogota date '+%Y-%m-%d %H:%M')"
+            git pull --rebase
+            git push
+          else
+            echo "Sin novedades"
+          fi

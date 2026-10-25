@@ -130,6 +130,20 @@ section h2{font-size:clamp(27px,7.5vw,38px);margin:6px 0 14px;color:var(--verde)
 .ig-card b{display:block;font-size:17px}
 .ig-card small{opacity:.9}
 
+.robot{display:inline-block;font-size:13px;font-weight:800;color:var(--verde2);background:#e9f7ee;border-radius:999px;padding:6px 12px;margin-bottom:12px}
+.nuevo{position:absolute;top:10px;left:10px;z-index:1;background:var(--sol);color:#3b2a00;font-size:11px;font-weight:900;padding:3px 8px;border-radius:8px;animation:late2 1.4s infinite}
+.nuevo-mini{background:var(--sol);color:#3b2a00;font-size:10px;padding:1px 6px;border-radius:6px}
+.mas{display:block;margin:12px auto 0;border:2px solid var(--verde2);background:#fff;color:var(--verde2);font-weight:900;border-radius:999px;padding:9px 18px;cursor:pointer}
+
+/* noticias */
+.noticias{display:grid;gap:10px}
+.noticia{display:block;text-decoration:none;background:var(--card);border-radius:16px;padding:14px 16px;border:2px solid var(--borde);border-left:6px solid var(--fucsia);transition:transform .2s}
+.noticia:active{transform:scale(.98)}
+.noticia:nth-child(3n+2){border-left-color:var(--turq)}.noticia:nth-child(3n){border-left-color:var(--sol)}
+.noticia .fuente{font-size:12px;font-weight:900;color:var(--fucsia);text-transform:uppercase;letter-spacing:.5px}
+.noticia b{display:block;font-size:16px;line-height:1.3;margin:3px 0;color:var(--tinta)}
+.noticia small{color:var(--suave);font-size:12px}
+
 /* los tres NO */
 .nos{display:grid;gap:12px}
 .no{display:flex;align-items:center;gap:14px;background:var(--card);border-radius:18px;padding:16px;border:2px solid var(--borde)}
@@ -281,11 +295,19 @@ footer a{color:var(--verde2);font-weight:900}
   <section class="revelar">
     <span class="etiq">Videos</span>
     <h2>Míralo en acción</h2>
+    <p class="robot" id="estadoRobot">🤖 Buscando novedades…</p>
     <div class="videos" id="videos"></div>
+    <button class="mas" id="masVideos" hidden></button>
     <a class="ig-card" href="https://www.instagram.com/viveroparaisohernandobetancour/reels/" target="_blank" rel="noopener" style="margin-top:14px">
       <img src="img/hernando.jpg" alt="Hernando Betancourt con sus perros">
       <div><b>Mira los reels del KM 18 ▶</b><small>@viveroparaisohernandobetancour · +27 mil seguidores</small></div>
     </a>
+  </section>
+
+  <section class="revelar">
+    <span class="etiq">En los medios</span>
+    <h2>Lo que dicen de él</h2>
+    <div class="noticias" id="noticias"></div>
   </section>
 
   <section class="revelar">
@@ -494,18 +516,54 @@ const VIDEOS=[
   ['2VtxpbIWAHA','El separador de Santander de Quilichao florecido'],
   ['mr4yc4p4n0I','Vivero Paraíso · Santander de Quilichao']
 ];
-VIDEOS.forEach(([id,t])=>{
-  const v=document.createElement('div');v.className='video';
-  v.innerHTML=`<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="${t}" loading="lazy"><div class="play"><span>▶</span></div><div class="tit">${t}</div>`;
-  v.onclick=()=>{v.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="${t}"></iframe>`;v.onclick=null};
-  $('#videos').appendChild(v);
-});
+const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const esNuevo=f=>f&&(Date.now()-new Date(f))<7*864e5;
+let verTodosVideos=false;
+function pintarVideos(lista){
+  const cont=$('#videos');cont.innerHTML='';
+  const mostrar=verTodosVideos?lista:lista.slice(0,4);
+  mostrar.forEach(({id,titulo,fecha})=>{
+    const t=esc(titulo),v=document.createElement('div');v.className='video';
+    v.innerHTML=`<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="${t}" loading="lazy">${esNuevo(fecha)?'<b class="nuevo">NUEVO</b>':''}<div class="play"><span>▶</span></div><div class="tit">${t}</div>`;
+    v.onclick=()=>{v.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="${t}"></iframe>`;v.onclick=null};
+    cont.appendChild(v);
+  });
+  const mas=$('#masVideos');mas.hidden=lista.length<=4;mas.textContent=verTodosVideos?'Ver menos':`Ver los ${lista.length} videos ▾`;
+}
+$('#masVideos').onclick=()=>{verTodosVideos=!verTodosVideos;pintarVideos(videosActuales)};
+let videosActuales=VIDEOS.map(([id,titulo])=>({id,titulo}));
+pintarVideos(videosActuales);
+
+function fechaCorta(f){if(!f)return '';const d=new Date(f);if(isNaN(d))return '';
+  const dias=Math.floor((Date.now()-d)/864e5);
+  return dias<1?'hoy':dias===1?'ayer':dias<30?`hace ${dias} días`:d.toLocaleDateString('es-CO',{timeZone:tz,day:'numeric',month:'short',year:'numeric'})}
+function pintarNoticias(ns){
+  $('#noticias').innerHTML=ns.slice(0,8).map(n=>`<a class="noticia" href="${esc(n.enlace)}" target="_blank" rel="noopener">
+    <span class="fuente">${esc(n.fuente||'Medio')}${esNuevo(n.fecha||n.encontrado)?' <b class="nuevo-mini">NUEVO</b>':''}</span>
+    <b>${esc(n.titulo)}</b><small>${fechaCorta(n.fecha)}</small></a>`).join('');
+}
+
+/* robot: trae lo que encontró en YouTube y en las noticias */
+async function cargarMedios(avisar){
+  $('#estadoRobot').textContent='🔎 Buscando novedades…';
+  try{
+    const r=await fetch('data/medios.json?t='+Date.now(),{cache:'no-store'});const d=await r.json();
+    const vistos=new Set(),todos=[];
+    [...(d.videos||[]),...VIDEOS.map(([id,titulo])=>({id,titulo}))].forEach(v=>{if(!vistos.has(v.id)){vistos.add(v.id);todos.push(v)}});
+    videosActuales=todos;pintarVideos(todos);pintarNoticias(d.noticias||[]);
+    const nuevos=todos.filter(v=>esNuevo(v.fecha)).length+(d.noticias||[]).filter(n=>esNuevo(n.fecha||n.encontrado)).length;
+    $('#estadoRobot').innerHTML=`🤖 Robot activo · última novedad ${esc(new Date(d.actualizado).toLocaleString('es-CO',{timeZone:tz,day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}))} · ${todos.length} videos · ${(d.noticias||[]).length} noticias`;
+    if(avisar)toast(nuevos?`🌸 ${nuevos} novedad${nuevos>1?'es':''} esta semana`:'🌸 ¡Todo al día!');
+  }catch(e){$('#estadoRobot').textContent='🤖 Sin conexión: mostrando lo guardado'}
+}
+cargarMedios(false);
 
 /* actualizar */
 $('#btnAct').onclick=async()=>{
   const b=$('#btnAct');b.classList.add('girando');
   try{ if('serviceWorker' in navigator){const r=await navigator.serviceWorker.getRegistration();if(r)await r.update();} }catch(e){}
-  setTimeout(()=>{b.classList.remove('girando');pintarHoy();animar($('#contador'),70000,1500);fiesta(innerWidth-60,40,16);toast('🌸 ¡Actualizado!')},900);
+  await cargarMedios(true);
+  setTimeout(()=>{b.classList.remove('girando');pintarHoy();animar($('#contador'),70000,1500);fiesta(innerWidth-60,40,16)},600);
 };
 
 /* aparecer al hacer scroll */
