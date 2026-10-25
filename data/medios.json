@@ -1,8 +1,345 @@
 {
-  "actualizado": "2026-10-25T06:25:00-05:00",
-  "canales": [],
-  "videos": [],
+  "actualizado": "2026-10-25T10:00:09-05:00",
+  "canales": [
+    "UCNtU-AR5NxwswN-Vmin97fQ"
+  ],
+  "videos": [
+    {
+      "id": "LmuYxMVxOF4",
+      "titulo": "Entrevista - Hernando Betancur - Vivero Paraiso Sembrando Vida",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "waCYDZG4XDo",
+      "titulo": "Agenda Valle y Cauca Hugo J Rodríguez Vivero Paraíso Hernando Betancourt Suárez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "wOKonEvLiXY",
+      "titulo": "Vivero Paraiso Sembrando Vida Hernando Betancourt Suárez 2021",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "IkXmHjl1OrU",
+      "titulo": "Vivero Paraíso Sembrando Vida Hernando Betancourt Suárez - Recomendaciones de Expertos",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "xRm5xN2LrQI",
+      "titulo": "Asamblea del departamento del Cauca Homenaje y Reconocimiento a Hernando Betancourt Vivero Paraíso",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "-WdmItpR7qw",
+      "titulo": "Vivero Paraíso Embellecimiento de las Autopistas de Colombia Hernando Betancourt Suarez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "tolDsIsE0hA",
+      "titulo": "Vivero Paraíso Hace 5 Años Seguimos Embellecimiento de Colombia Hernando Betancourt Suárez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "QfKn8HJOqKo",
+      "titulo": "Vivero Paraiso Sembrando Vida Hernando Betancourt",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "h1WAhJtWmAI",
+      "titulo": "Vivero Paraiso Sembrando Vida Hernando Betancourt General Fabian Laurence Cardenas Policia Nacional",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "gOPO0YWn38k",
+      "titulo": "Vivero Paraíso Sembrando Vida Hernando Betancourt Suárez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "iDHZnQAw9A4",
+      "titulo": "Vivero Paraíso Grandes Profesionales ING Hernando Betancourt Suárez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "1hyuvhbloss",
+      "titulo": "VIVERO PARAISO SEMBRANDO VIDA Y AMIGOS HERNANDO BETANCOURT",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "fZxrYbe7MeE",
+      "titulo": "Vivero Paraiso Sembrando vida Hernando Betancourt",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "2N1mRw8JWIk",
+      "titulo": "Vivero Paraíso Sembrando Vida Hernando Betancourt Suárez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "F9q6YxW5s8I",
+      "titulo": "Candelaria Sembrando Vida con vivero Paraíso Hernando Betancourt Suárez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "GFLXmRN7HNI",
+      "titulo": "Marzo 30 del 2022 Vivero Paraiso Sembrando Vida Hernando Betancourt Suárez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "OiQRvDUnsaE",
+      "titulo": "Febrero 1 del 2022 Frutales Cali Vivero Paraiso Hernando Betancourt Suárez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "kYtlQGOf6ak",
+      "titulo": "Marzo 30 del 2022 Vivero Paraiso Sembrando Vida Hernando Betancourt Suárez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "_vSwmrtxnfs",
+      "titulo": "Vivero Paraiso Sembrando Vida Hernando Betancourt Suárez Donando Árboles a Todo el Pais",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "rEXXhWxSoME",
+      "titulo": "El Canal Zona D TV estuvo en el Vivero Paraíso",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "fcrhVuZqfF4",
+      "titulo": "Vivero Paraiso Sembrando Vida Hernando Betancourt Suárez Donando Árboles a Todo el Pais",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "npf8RKmKSHk",
+      "titulo": "Vivero Paraiso Sembrando Vida Hernando Betancourt Suárez Donando Árboles a Todo el Pais",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "_P8v_14-EXQ",
+      "titulo": "Vivero Paraíso Sembrando Vida Hernando Betancourt Suárez Abril 28 del 2018",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "_8W8DEu3EUY",
+      "titulo": "Se Tu Mejor Versión, Todos Somos Estado Vivero Paraiso sembrando Vida Hernando Betancourt.",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "Ly2DctXDKTI",
+      "titulo": "Vivero Paraiso Sembrando Vida Hernando Betancourt Suárez Donando Árboles a Todo el Pais",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "9ijk6D0PvXo",
+      "titulo": "Vivero Paraiso sembrando Vida Donando Vida a Toda Colombia",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "hDHZRIHazjc",
+      "titulo": "Vivero Paraiso Sembrando Vida Hernando Betancourt Suárez Donando Árboles a Todo el Pais",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "9JBmurKCgLk",
+      "titulo": "Vivero Paraiso  Sembrando Vida Hernando Betancourt Suárez  Donando Vida",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "GpNFXwJznzw",
+      "titulo": "Vivero Paraiso sembrando Vida Donando Vida a Toda Colombia",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "09ccw1QCpNk",
+      "titulo": "Vivero Paraiso Sembrando Vida Hernando Betancourt Suárez Donando Árboles a Todo el Pais",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "iYwcMbnRvGw",
+      "titulo": "Vivero Paraíso Sembrando Vida Hernando Betancourt Abril 23 del 2018",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "8chrZ0LZDkU",
+      "titulo": "Agosto 25 del 2022 Vivero Paraíso Sembrando Vida Hernando Betancourt Suárez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "9k07-BSGIWw",
+      "titulo": "Vivero Paraiso Sembrando Vida Hernando Betancourt Suárez Donando Árboles a Todo el Pais",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "A8uKBnGb5JY",
+      "titulo": "Vivero Paraíso Sembrando Vida Hernando Betancourt Suárez Febrero 17 del 2018",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "pvKf8xuwImc",
+      "titulo": "Vivero Paraíso Sembrando Vida Hernando Betancourt Suárez Abril 20 del 2018",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "f8F4MkiJk0A",
+      "titulo": "Via de Ensueño Km. 18 Telepacifico - Amaneciendo Vivero Paraiso Sembrando Vida Hernando Betancourt",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "XcOFZuRaZck",
+      "titulo": "Vía de Ensueño K18 Hernando Betancourt Suárez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "IaU1sk3bbuo",
+      "titulo": "Mama Octubre 18 del 2019 Hernando Betancourt Suárez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "qrbSUnleqak",
+      "titulo": "Vía de Ensueño K18 Enero 31 del 2018 Hernando Betancourt Suárez",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "id": "svKGNPCbqIk",
+      "titulo": "HDV Hernando Betancourt - Cuentos Verdes 20 de marzo 2026",
+      "fecha": "",
+      "canal": "",
+      "origen": "busqueda",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    }
+  ],
   "noticias": [
+    {
+      "titulo": "Hernando Betancourt Suárez impulsa la siembra de árboles y la recuperación de espacios públicos en Colombia y el mundo",
+      "enlace": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQdUZINUxRbkM3MTJEa2MxdHYxTkg5VmxxTTJ2b3N4ejUxblRmdWtGMm96VG81VG1aYUJtVzhCSE01U0V3TzRpQ3JiY05rUVJoYXotZTI1VFdDd1k2QkhBd3VFekF5Q1hOX0Q3Sm1fbFBPb00yMTNWYXVyWExJQmNZOWxESFVvOVhmNGQwX0FfVG9tSU1VQUxlcVNuMFJic241WWJwSkRTVVlDY3pmTzRwYTRDZUhWaDRZSWdYT2t30gHDAUFVX3lxTE5MV2hGalRtVWtidk1iVkdSSllvZThhX0x4U18taG5fZjRKZDdhZlVQNURQVkJlV0FreU8tU3RscUFId3NJNFUxYTdEa2V1RnpDVk9IOFA5OGFPWXZqWmsyTjlIaTlCVEpacFVIbWhwOS1Vc0NDb2ZFekdxUG5zVGJCUkFocXptZkJTamlkajRrTVBScV9ieTMtMXo1SGtzczRRUlFYWGJ2Q3BnR19BeFFKbEV1VjJORU9sTTBYcDJUWVdyVQ?oc=5",
+      "fuente": "Pulzo",
+      "fecha": "2026-09-25T07:00:00.000Z",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "titulo": "Conoce a Hernando Betancourt Suárez y su vocación por sembrar vida",
+      "enlace": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPRGdDckJKR2tqdTQ1UnhnM3RrdHU0MVNOM182djMxSFE0YkU1dFFFRGJFT29YbXlJRURCNl9MTlc3d0pqM1BfOFg3MTYzVXo5X0l0c0drTjVWT1l2S0VxS0hkWFhwZHIyVnVhcENZTkFIN3JrVTQ0UF9pbWlya18zdlhVSmZmN3prdGZUdjZNQ0hfUkXSAZgBQVVfeXFMTkhQQ2RlVktkeDBfZmR2eWZMR2xDOEhiWHZEdEFoZGVNTEo0eXJnaWs2M2JUR05EV0NoNTFRZHJUTXhDVzFtbjFYeHdkbmN3c0JtQVQzQzRrdW5DbmwtUHk3VVQ2Sl9vcHdQZzY5TXVUX19CNzF6cThscWYxdi10bDdjYThYelA0RW5OOXcwZE1ETWVwanpDQ1k?oc=5",
+      "fuente": "Noticiero 90 Minutos",
+      "fecha": "2026-09-25T07:00:00.000Z",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
     {
       "titulo": "Vivero Paraíso regala plantas \"pero el compromiso es que las cuiden\", la historia del jardín más grande de Colombia",
       "enlace": "https://tubarco.news/vivero-paraiso-regala-plantas-pero-el-compromiso-es-que-las-cuiden-la-historia-del-jardin-mas-grande-de-colombia/",
@@ -20,6 +357,55 @@
       "enlace": "https://unimedios.usc.edu.co/23249-2/",
       "fuente": "Unimedios USC",
       "fecha": "2026-05-12T12:00:00.000Z"
+    },
+    {
+      "titulo": "Hernando Betancourt es honrado con el Grado «Cruz de Caballero»",
+      "enlace": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNbVQyNlFWZ0hDVnNaZ2NuWklzX3BCS0RSYjA2V2k3aGk2d2tYNDA3VEd5bHBtSVBGWmRfbWY4NlhTVVJOZnZYT0tYVVRzX25fZmpIcU54VDhRUnh0RFJ1NGJKZmFmTDAyTWN4MlpObmtRQXdicE95RUxZa00zZnlTajdSbnM4d05uSU1Zc2kxNnZsR0sxZ1l5TFpB?oc=5",
+      "fuente": "Proclama del Pacifico",
+      "fecha": "2026-02-21T09:44:24.000Z",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "titulo": "Inauguran Vivero Paraíso en Santander de Quilichao",
+      "enlace": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNc012bUp6cnlpaU8wbFRRb091STd0V3NhV2t0VGVlQ3p6c0tSUjNXTmVhak44MDUzc2pza2FpX2pRRkNKYmF4RVBUTFBBbGNzanl0bm1aeEZFODRnbjN1RFg5c0VkR1ZmWWR3cjdsU3N1eU5IbmxRcTVXOVctd2hqMnhnWQ?oc=5",
+      "fuente": "Proclama del Pacifico",
+      "fecha": "2026-01-02T04:18:53.000Z",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "titulo": "Hernando Betancourt, un filántropo que siembra árboles en el Valle del Cauca",
+      "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPdm9qNlNWR1RDTmxqSWJjb0JteW9jSXEwRGVpY011NHoxVkVBV3VpdlF5NlZqanQ3eXA1NmRfSXVjdlk0YktKaVpfYkhtTzZDNTJEUUxKaTdoaTV2dDRzRXdCQzF5bktlVTRzRFNyc0RUb3liakdYdFhtX0xpeWRtRS14UkV5NkdEMFVPc1Fwb21MNnlYdkJlSzk0dTIzRDN5X0E4UUNRcDU1RGlaZEYtMWpFS19XY3BaSkE?oc=5",
+      "fuente": "Radio Nacional de Colombia",
+      "fecha": "2023-04-16T07:00:00.000Z",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "titulo": "Vivero Paraíso regala plantas \"pero el compromiso es que las cuiden\", la historia del jardín más grande de Colombia",
+      "enlace": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNSUVBM1dVTGFoZnBCNmRfSGs0bUV0UGtkbnBvY2J3ZV9GczYtdGpSZjZIYXJiRzctYmsxWURjZXdMQVZiWDJYRzlTUXo1NDRRLWVtVTQtR1FTS01wMXB1YUdwNFFyVXI5aEZ5VHg4ZWx4VlBzWFJlSmdvUTFZUFRYNldRbFk2dVdvaHNIM2JpSEtIZFRVX1FaY1hNOFVadnRZd2d1bjl4b3BNS2syQ1RtbGFHek95V21BOUJoUm0wZ0c2NFBuMHJ5ci1aVlEzZUU?oc=5",
+      "fuente": "tubarco.news",
+      "fecha": "2022-09-22T07:00:00.000Z",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "titulo": "Concejo de Quilichao hizo reconocimiento a Hernando Betancourt",
+      "enlace": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRGJPdjBtSnNMdTE4b01BUjFpMzFZV081QVIzbEpyQndMbEtFNnRJMHlIcVZOT3JGNzdoeWhHdzY0OXo5OWFHVDU1eGQ4UXdwMFBYelNxTkdnRm04ckZKb21DeHFwYjhzUVJtTWJKdVhISHJ4MTk2R29qZEo0Nm0tejdFZ1JSbkhUM0F0LTB2UTdON2NMVmY3NV9mOA?oc=5",
+      "fuente": "Proclama del Pacifico",
+      "fecha": "2022-05-24T07:00:00.000Z",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "titulo": "Concejo de Cali dio reconocimiento a Hernando Betancourt por su labor",
+      "enlace": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOc0RmSkdWdEhCTThoVHZFbnpFZFJDZHB1dGZLYzJPclZOaURWcklHcWhPZncyOURKa0ROVmNGSGJ6R0ZBMmx5LXQzdUJZQkxkZ01VRW4xWjhBMzAzaEE2NFdUa3d1YlFnM3ZMM2xYN2hRUTF2MmpxRmVBNGU1T1FiaUtRdWxCYm84aHJ3SGo3ZmVzMEtrZXU2SG0xMHhIam9UQ19sYQ?oc=5",
+      "fuente": "Proclama del Pacifico",
+      "fecha": "2021-11-26T08:00:00.000Z",
+      "encontrado": "2026-10-25T10:00:09-05:00"
+    },
+    {
+      "titulo": "Donaciones de Hernando Betancourt embellecen Santander de Quilichao",
+      "enlace": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNRGxyS21qV09NR1A2UmZSdEZFc0hsU1J2a1BmVk8zSlVYQm5kRzRjSnZRd1lTTDBldDRRMFBuRmJCLWlPa0FWZ2JfLXJiZ043QzRscExnbUVDUU9XZm55cjhrUHNfYllDYTQxbnpxbFpUTV9wZk5tX3dhUzZwVUxwRGFlRWxFWFlwNno4N1lzS0VZREgzYzF1aW5XU3Z1VDR6N2c?oc=5",
+      "fuente": "Proclama del Pacifico",
+      "fecha": "2021-01-01T08:00:00.000Z",
+      "encontrado": "2026-10-25T10:00:09-05:00"
     },
     {
       "titulo": "Un vallecaucano es el hombre que más árboles ha sembrado en Colombia: esta es su historia",
