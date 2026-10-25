@@ -1,5 +1,5 @@
-const CACHE = 'km18-v1';
-const ARCHIVOS = ['./', 'index.html', 'manifest.json', 'icon.svg'];
+const CACHE = 'km18-v2';
+const ARCHIVOS = ['./', 'index.html', 'manifest.json', 'icon.svg', 'img/km18-siembra.jpg', 'img/km18-mural.jpg', 'img/hernando.jpg'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ARCHIVOS)));
