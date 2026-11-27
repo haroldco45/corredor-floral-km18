@@ -28,7 +28,7 @@ jobs:
             git config user.name "robot-vibras"
             git config user.email "robot@vibraspositivashm.com"
             git add data
-            git commit -m "🤖 Novedades de medios $(TZ=America/Bogota date '+%Y-%m-%d %H:%M')"
+            git commit -m "[skip netlify] 🤖 Novedades de medios $(TZ=America/Bogota date '+%Y-%m-%d %H:%M')"
             git pull --rebase
             git push
           else
